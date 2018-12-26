@@ -44,11 +44,15 @@ $border-radius: 3;
 
 // Colors
 $background: #fff;
-$primary: lighten(#000, 13%);
-$secondary: lighten(#000, 46%);
-$disabled: lighten(#000, 62%);
+// $primary: lighten(#000, 13%);
+// $secondary: lighten(#000, 46%);
+// $disabled: lighten(#000, 62%);
+$primary: lighten(#FEDBD0, 100%);
+$secondary: lighten(#442C2E, 100%);
+$disabled: lighten(#000, 100%);
 $accent: $accent-dark;
 $error: $error-light;
+
 
 // SideDrawer
 $item-color-android : #737373;

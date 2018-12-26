@@ -1,15 +1,21 @@
 import Vue from "nativescript-vue";
 
-import Home from "./components/Home";
+import HomeScreen from "./components/HomeScreen";
+import LoginScreen from "./components/LoginScreen";
+import CartScreen from "./components/CartScreen";
 
 new Vue({
 
     template: `
         <Frame>
-            <Home />
+            <HomeScreen />
+        <!--<LoginScreen />-->
+        <!--<CartScreen />-->
         </Frame>`,
 
     components: {
-        Home
+        HomeScreen,
+        LoginScreen,
+        CartScreen,
     }
 }).$start();
