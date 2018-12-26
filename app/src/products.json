@@ -1,0 +1,20 @@
+[
+  {
+    "name"        :"Lorem",
+    "image"       :"https://via.placeholder.com/150x80/000000/FFFFFF/?text=LoremProduct",
+    "description" :"Lorem Ipsun Bacon",
+    "price"       :"123"
+  },
+  {
+    "name"        :"Ipsun",
+    "image"       :"https://via.placeholder.com/150/000066/FFAAFF/?text=IpsunProduct",
+    "description" :"Lorem Ipsun Bacon",
+    "price"       :"123"
+  },
+  {
+    "name"        :"Bacon",
+    "image"       :"https://via.placeholder.com/150/004400/FFFFAA/?text=BaconProduct",
+    "description" :"Lorem Ipsun Bacon",
+    "price"       :"123"
+  }
+]

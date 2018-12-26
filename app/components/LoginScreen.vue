@@ -11,32 +11,38 @@
 </template>
 
 <script>
-export default {
-  data() {
-        return {
-          
-        }
-      },
-      computed: {
-        name_hint() {
-          return "Your name";
-        },
-        email_hint() {
-          return "Your email";
-        },
-        pass_hint() {
-          return "Your password";
-        }
-      },
-      methods: {
-        validateInputs(){
-          console.log("validating")
-        },
-        cancelInputs(){
-          console.log("canceling")
-        }
+  import HomeScreen from "~/components/HomeScreen";
+
+  export default {
+    
+    data() {
+      return {
+        
       }
-}
+    },
+    computed: {
+      name_hint() {
+        return "Your Name";
+      },
+      email_hint() {
+        return "Your Email";
+      },
+      pass_hint() {
+        return "Your Password";
+      }
+    },
+
+    methods: {
+      validateInputs(){
+        console.log("TODO: validating")
+        this.$navigateTo(HomeScreen);
+        
+      },
+      cancelInputs(){
+        console.log("TODO: canceling")
+      }
+    }
+  }
 </script>
 
 <style scoped lang="scss">
@@ -51,6 +57,7 @@ export default {
   }
   
   .input__btn--confirm{
+    color: $secondary;
     background: $primary;
   }
 

@@ -11,23 +11,40 @@
           <Span class="fa" text.decode="&#xf135; "/>
           <Span :text="message"/>
         </FormattedString>
-          
       </Label>
-      <Button text="goModal" @tap="goModal"/>
-      <Button text="goPage" @tap="goPage"/>
-      <Button text="loginExternal" @tap="goExternal"/>
+
+      <Button text="loginExternal" @tap="doStuff" />
       
-      <Label :text="products"></Label>
     </StackLayout>
   </Page>
 </template>
 
 <script>
+  
     export default {
       data() {
         return {
-          products: 'Socks',
-          inStock: true
+          inStock: false,
+          products:[
+            {
+              "name"        :"Lorem",
+              "image"       :"https://via.placeholder.com/150x80/000000/FFFFFF/?text=LoremProduct",
+              "description" :"Lorem Ipsun Bacon",
+              "price"       :"123"
+            },
+            {
+              "name"        :"Ipsun",
+              "image"       :"https://via.placeholder.com/150/000066/FFAAFF/?text=IpsunProduct",
+              "description" :"Lorem Ipsun Bacon",
+              "price"       :"123"
+            },
+            {
+              "name"        :"Bacon",
+              "image"       :"https://via.placeholder.com/150/004400/FFFFAA/?text=BaconProduct",
+              "description" :"Lorem Ipsun Bacon",
+              "price"       :"123"
+            }
+          ]
         }
       },
       computed: {
@@ -36,43 +53,13 @@
         }
       },
       methods: {
-        goModal(){
-          console.log("loginModal!")
-          this.$showModal(loginModal)
-        },
-        goPage(){
-          console.log("loginPage!")
-          this.$navigateTo(loginPage)
-        },
-        goExternal(){
-          console.log("LoginExternal!")
-          // this.$navigateTo(LoginExternal)
+        doStuff(){
+          console.log(`doing: ${this.products[0]}`)
+          
         },
       },
   };
 
-  const loginModal = {
-    template: `
-      <Page>
-      <ActionBar title="loginModal"/>
-      <StackLayout>
-        <TextField text="input" hint="Enter text..." />
-        <Button @tap="$modal.close" text="Close" />
-      </StackLayout>
-      </Page>
-    `,
-  };
-  const loginPage = {
-    template: `
-      <Page>
-      <ActionBar title="loginPage"/>
-      <StackLayout>
-        <TextField text="input" hint="Enter text..." />
-        <Button @tap="$navigateBack" text="Close" />
-      </StackLayout>
-      </Page>
-    `,
-  }
 </script>
 
 <style scoped lang="scss">
