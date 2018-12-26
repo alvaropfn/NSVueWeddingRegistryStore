@@ -19,9 +19,9 @@
           <DockLayout stretchLastChild="true"  height="140" >
             <Image dock="left" height="150" width="150" :src="product.image"  />
             
-            <Label :text="product.name" dock="top" height="40" backgroundColor="#289062"/>
-            <Label text="add" dock="right" width="40" backgroundColor="#43b883"/>
-            <Label :text="product.description" dock="bottom" backgroundColor="#1c6b48"/>
+            <Label :text="product.name" dock="top" height="20"/>
+            <Button text="add" dock="right" width="60" @tap="addToCart(product)"/>
+            <TextView :text="product.description" dock="bottom" editable="false"/>
           </DockLayout>
         </v-template>
       </ListView>
@@ -41,7 +41,7 @@
             {
               "name"        :"Lorem",
               "image"       :"https://via.placeholder.com/150x80/000000/FFFFFF/?text=LoremProduct",
-              "description" :"Lorem Ipsun Bacon",
+              "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
               "price"       :"123"
             },
             {
@@ -88,6 +88,9 @@
         tapProduct(e){
           console.log('Item Event')
           // console.log(e)
+        },
+        addToCart(p){
+          console.log(p.name)
         }
       },
   };
