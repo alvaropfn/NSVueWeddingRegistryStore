@@ -4,11 +4,10 @@ import LoginScreen from "./components/LoginScreen";
 import HomeScreen from "~/components/HomeScreen";
 
 new Vue({
-    isLoged: true, 
     template: `
         <Frame>
-            <!-- <HomeScreen /> -->
-            <LoginScreen />
+             <HomeScreen /> 
+             <!-- <LoginScreen />-->
         </Frame>
         `,
     components:{
