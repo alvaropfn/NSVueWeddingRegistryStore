@@ -7,8 +7,8 @@ new Vue({
     isLoged: true, 
     template: `
         <Frame>
-            <HomeScreen /> 
-            <!-- <LoginScreen /> -->
+            <!-- <HomeScreen /> -->
+            <LoginScreen />
         </Frame>
         `,
     components:{
