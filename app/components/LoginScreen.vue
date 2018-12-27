@@ -1,9 +1,9 @@
 <template>
   <Page>
     <StackLayout>
-      <TextField id="name" class="textfield-login" text="" v-model="inputName" :hint="name_hint" autocorrect="false" keyboardType=""/>
-      <TextField id="email" class="textfield-login" text="" v-model="inputEmail" :hint="email_hint" autocorrect="false" keyboardType="email"/>
-      <TextField id="pass" class="textfield-login" text="" v-model="inputPass" :hint="pass_hint" autocorrect="false" secure="true"/>
+      <TextField class="textfield-login" text="" v-model="inputName" :hint="name_hint" autocorrect="false" keyboardType=""/>
+      <TextField class="textfield-login" text="" v-model="inputEmail" :hint="email_hint" autocorrect="false" keyboardType="email"/>
+      <TextField class="textfield-login" text="" v-model="inputPass" :hint="pass_hint" autocorrect="false" secure="true"/>
       <Button class="input__btn input__btn--confirm" @tap="validateInputs" text="Confirm" />
       <Button class="input__btn input__btn--cancel" @tap="cancelInputs" text="Cancel" />
     </StackLayout>
@@ -12,7 +12,24 @@
 
 <script>
   import HomeScreen from "~/components/HomeScreen";
-
+  const ModalError = {
+    props: ["errorPool"],
+    template: `
+      <Frame>
+        <Page>
+          <ActionBar title="Detail"/>
+          <StackLayout>
+            <ListView for="message in errorPool" >
+              <v-template>
+                <TextView :text="message" editable="false"/>
+              </v-template>
+            </ListView>
+            <Button @tap="$modal.close" text="Close" />
+          </StackLayout>
+        </Page>
+      </Frame>
+    ` 
+  }
   export default {
     
     data() {
@@ -33,27 +50,39 @@
     },
 
     methods: {
+      
       validName(){
+        
         return /^([a-zA-Z]){4,}/.test(this.inputName);
       },
-      validMail(){
+      validEmail(){
+        
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+/.test(this.inputEmail)
       },
       validPass(){
+        
         return /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$/.test(this.inputPass)
       },
       validateInputs(){
+        let modalMessages = []
+        let validated = true
         if(!this.validName()){
-          console.log("invalid Name")
+          validated = false
+          modalMessages.push("Name should have 4 or more characters")
         }
         if(!this.validEmail()){
-          console.log("invalid Email")
+          validated = false
+          modalMessages.push("Email should has a valid domain")
         }
         if(!this.validPass()){
-          console.log("invalid Pass")
+          validated = false
+          modalMessages.push("Password should contain mininum length of 6 and at last a capital charactar and a number")
         }
-        this.$navigateTo(HomeScreen);
-        
+
+        if(validated)
+          this.$navigateTo(HomeScreen);
+        else
+          this.$showModal(ModalError,{props:{errorPool: modalMessages}});
       },
       cancelInputs(){
         console.log("TODO: canceling")
