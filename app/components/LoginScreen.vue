@@ -13,13 +13,13 @@
 <script>
   import HomeScreen from "~/components/HomeScreen";
   const ModalError = {
-    props: ["errorPool"],
+    props: ["errorList"],
     template: `
       <Frame>
         <Page>
           <ActionBar title="Detail"/>
           <StackLayout>
-            <ListView for="message in errorPool" >
+            <ListView for="message in errorList" >
               <v-template>
                 <TextView :text="message" editable="false"/>
               </v-template>
@@ -82,7 +82,7 @@
         if(validated)
           this.$navigateTo(HomeScreen);
         else
-          this.$showModal(ModalError,{props:{errorPool: modalMessages}});
+          this.$showModal(ModalError,{props:{errorList: modalMessages}});
       },
       cancelInputs(){
         console.log("TODO: canceling")
