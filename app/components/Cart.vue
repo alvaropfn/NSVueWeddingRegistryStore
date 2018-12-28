@@ -7,7 +7,7 @@
           <Label text="Wedding Companion Store"/>
           <Label :text="this.$props.wallet"/>
         </StackLayout>
-        <Button dock="right" class="btn btn-primary" text="Pay" @tap="payCart"></Button>
+        <Button dock="right" class="btn btn-primary" text="Pay" @tap="goToPayed"></Button>
       </DockLayout >
     </ActionBar>
     <GridLayout rows="*" columns="*">
@@ -43,18 +43,16 @@ z
 </template>
 
 <script>
+import routes from "~/routes/";
 export default {
   props: ["cart", "wallet"],
   computed:{
     appName: "Wedding Store"
   },
   methods:{
-    payCart(){
-      console.log(this.$props.wallet)
+    goToPayed(){
+      this.$navigateTo(routes.payed)
     },
-    remToCart(){
-      console.log(this.$props.wallet)
-    }
   },
   
 };

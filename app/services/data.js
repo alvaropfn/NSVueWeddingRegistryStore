@@ -44,7 +44,7 @@ module.exports = {
         quantity: 6
     }, {id: 7,
         name: "wardrobe",
-        src: "~/images/items/wardrove.jpg",
+        src: "~/images/items/wardrobe.jpg",
         description: "Its tail is large and covered with a rich, thick fur. The tail becomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon’s toughness as a battler.",
         price: 160,
         quantity: 2
