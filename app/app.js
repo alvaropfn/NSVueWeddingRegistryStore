@@ -1,23 +1,15 @@
 import Vue from "nativescript-vue";
-import LoginScreen from "./components/LoginScreen";
-import HomeScreen from "~/components/HomeScreen";
-//import store from "./src/store/" // TODO solve why its broke
 
-Vue.registerElement('Fab', ()=> require('nativescript-floatingactionbutton').Fab)
+import routes from "./routes";
+import BackendService from "./services/backend-service";
+
+// Uncommment the following to see NativeScript-Vue output logs
+// Vue.config.silent = false;
+
+const backendService = new BackendService();
+Vue.prototype.$backendService = backendService;
 
 new Vue({
-    template: `
-    <Frame>
-        <HomeScreen /> 
-        <!-- <LoginScreen />-->
-    </Frame>
-    `,
-    components:{
-        LoginScreen,
-        HomeScreen
-    }
+  // render: h => h("frame", [h(backendService.isLoggedIn() ? routes.cart : routes.login)])
+  render: h => h("frame", [h(backendService.isLoggedIn() ? routes.home : routes.login)])
 }).$start();
-
-
-
-
