@@ -1,20 +1,66 @@
 [
   {
-    "name"        :"Lorem",
-    "image"       :"https://via.placeholder.com/150x80/000000/FFFFFF/?text=LoremProduct",
-    "description" :"Lorem Ipsun Bacon",
-    "price"       :"123"
+    "id"          :"0",
+    "name"        :"Cups",
+    "image"       :"~/src/images/cup.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon.",
+    "price"       :"1123",
+    "quantity"    :"1"
   },
   {
-    "name"        :"Ipsun",
-    "image"       :"https://via.placeholder.com/150/000066/FFAAFF/?text=IpsunProduct",
-    "description" :"Lorem Ipsun Bacon",
-    "price"       :"123"
+    "id"          :"1",
+    "name"        :"Eletric",
+    "image"       :"~/src/images/eletric.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"567",
+    "quantity"    :"7"
   },
   {
-    "name"        :"Bacon",
-    "image"       :"https://via.placeholder.com/150/004400/FFFFAA/?text=BaconProduct",
-    "description" :"Lorem Ipsun Bacon",
-    "price"       :"123"
+    "id"          :"2",
+    "name"        :"Pots",
+    "image"       :"~/src/images/pot.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"789",
+    "quantity"    :"9"
+  },
+  {
+    "id"          :"3",
+    "name"        :"Stove",
+    "image"       :"~/src/images/stove.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"123",
+    "quantity"    :"8"
+  },
+  {
+    "id"          :"4",
+    "name"        :"Tea",
+    "image"       :"~/src/images/tea.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"567",
+    "quantity"    :"10"
+  },
+  {
+    "id"          :"5",
+    "name"        :"Bed",
+    "image"       :"~/src/images/bed.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"789",
+    "quantity"    :"3"
+  },
+  {
+    "id"          :"6",
+    "name"        :"Refrigarator",
+    "image"       :"~/src/images/refrigerator.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"789",
+    "quantity"    :"5"
+  },
+  {
+    "id"          :"7",
+    "name"        :"Wardrobe",
+    "image"       :"~/src/images/wardrobe.jpg",
+    "description" :"Bacon ipsum dolor amet filet mignon bacon ball tip, burgdoggen short ribs porchetta prosciutto t-bone tongue. Chuck alcatra picanha, cupim kevin leberkas beef biltong beef ribs corned beef meatball buffalo shoulder pig cow.",
+    "price"       :"789",
+    "quantity"    :"2"
   }
 ]
