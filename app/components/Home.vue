@@ -2,12 +2,12 @@
 	<Page class="page">
 		<ActionBar>
       <DockLayout>
-        <Button dock="left" class="btn btn-primary" text="back" @tap="logout"></Button>
+        <Button dock="left" class="btn btn-secundary" text="back" @tap="logout"></Button>
         <StackLayout>
           <Label text="Wedding Companion Store"/>
           <Label :text="wallet"/>
         </StackLayout>
-        <Button dock="right" class="btn btn-primary" text="cart" @tap="goToCart"></Button>
+        <Button dock="right" class="btn btn-secundary" text="cart" @tap="goToCart"></Button>
       </DockLayout >
     </ActionBar>
 
@@ -37,11 +37,11 @@
                       <Span :text="item.price"/>
                   </FormattedString>
                 </TextView>
-                <Button class="btn btn-primary" dock="rigth" text="Add" width="100"  @tap="addToCart(item)"></Button>
+                <Button class="btn btn-secundary btn-secundary--add" dock="rigth" text="+" width="100"  @tap="addToCart(item)" :style="item.quantity > 0 ? isEnable='true': isEnable='false'"></Button>
               </DockLayout>
 
 						</StackLayout>
-
+z
 					</v-template>
 				</ListView>
 			</GridLayout>
@@ -119,7 +119,7 @@ export default {
         }
         else{
           this.$navigateTo(routes.cart, {
-              props: { "cart": this.cart }
+              props: { "cart": this.cart, "wallet": this.wallet }
           });
         }
       },
